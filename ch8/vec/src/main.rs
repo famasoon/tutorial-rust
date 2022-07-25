@@ -8,4 +8,10 @@ fn main() {
         Some(third) => println!("The third element is {}", third),
         None => println!("There is no third element"),
     }
+
+    let mut v = vec![100, 32, 57];
+    for i in &mut v {
+        *i += 50;
+        println!("i is {}", i);
+    }
 }
