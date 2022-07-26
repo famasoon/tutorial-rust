@@ -1,12 +1,15 @@
-#[derive(Debug)]
 struct Point<T> {
     x: T,
     y: T,
 }
 
-fn main() {
-    let integer = Point { x: 5, y: 10};
-    let float = Point { x: 1.0, y: 4.0};
+impl<T> Point<T> {
+    fn x(&self) ->  &T {
+        &self.x
+    }
+}
 
-    println!("INT: {:?}, FLOAT: {:?}", integer, float);
+fn main() {
+    let p = Point { x: 5, y: 10};
+    println!("p.x = {}", p.x());
 }
