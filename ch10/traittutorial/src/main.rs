@@ -1,6 +1,6 @@
 mod summary;
 
-use crate::summary::{Summary, Tweet};
+use crate::summary::{NewsArticle, Summary, Tweet};
 
 fn main() {
     let tweet = Tweet {
@@ -10,4 +10,13 @@ fn main() {
         retweet: false,
     };
     println!("1 new tweet: {}", tweet.summarize());
+
+    let article = NewsArticle {
+        headline: String::from("Champion"),
+        location: String::from("USA"),
+        author: String::from("Ice"),
+        content: String::from("Hello"),
+    };
+
+    println!("News Article: {}", article.summarize());
 }
