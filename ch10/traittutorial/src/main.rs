@@ -1,6 +1,6 @@
-mod lib;
+mod summary;
 
-use crate::lib::{Tweet, Summary};
+use crate::summary::{Summary, Tweet};
 
 fn main() {
     let tweet = Tweet {
