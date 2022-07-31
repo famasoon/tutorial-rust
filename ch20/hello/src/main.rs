@@ -4,9 +4,9 @@ use std::net::TcpStream;
 use std::fs::File;
 
 fn main() {
-    let listner = TcpListener::bind("127.0.0.1:7878").unwrap();
+    let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
 
-    for stream in listner.incoming() {
+    for stream in listener.incoming() {
         let stream = stream.unwrap();
 
         handle_connection(stream);
